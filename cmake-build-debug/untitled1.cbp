@@ -76,6 +76,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/cygdrive/c/Users/GODPLC/CLionProjects/EasyDictionary/EasyDictionary/functionalOperation.c">
+			<Option target="untitled1"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/GODPLC/CLionProjects/EasyDictionary/EasyDictionary/functionalOperation.h">
+			<Option target="untitled1"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Users/GODPLC/CLionProjects/EasyDictionary/EasyDictionary/main.c">
 			<Option target="untitled1"/>
 		</Unit>

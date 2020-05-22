@@ -5,6 +5,6 @@
 #ifndef UNTITLED1_WORDLISTOPERATION_H
 #define UNTITLED1_WORDLISTOPERATION_H
 
-void addNode(char* chinese, char* english, int position);
+void appendNode(char* chinese, char* english);
 
 #endif //UNTITLED1_WORDLISTOPERATION_H

@@ -123,6 +123,33 @@ untitled1/fast:
 	$(MAKE) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/build
 .PHONY : untitled1/fast
 
+functionalOperation.o: functionalOperation.c.o
+
+.PHONY : functionalOperation.o
+
+# target to build an object file
+functionalOperation.c.o:
+	$(MAKE) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/functionalOperation.c.o
+.PHONY : functionalOperation.c.o
+
+functionalOperation.i: functionalOperation.c.i
+
+.PHONY : functionalOperation.i
+
+# target to preprocess a source file
+functionalOperation.c.i:
+	$(MAKE) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/functionalOperation.c.i
+.PHONY : functionalOperation.c.i
+
+functionalOperation.s: functionalOperation.c.s
+
+.PHONY : functionalOperation.s
+
+# target to generate assembly for a file
+functionalOperation.c.s:
+	$(MAKE) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/functionalOperation.c.s
+.PHONY : functionalOperation.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -213,6 +240,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... untitled1"
 	@echo "... edit_cache"
+	@echo "... functionalOperation.o"
+	@echo "... functionalOperation.i"
+	@echo "... functionalOperation.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

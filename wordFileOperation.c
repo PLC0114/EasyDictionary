@@ -7,6 +7,7 @@
 #include <stdlib.h>
 
 #include "wordList.h"
+#include "wordListOperation.h"
 #include "common.h"
 
 extern wordList *wordlist;
@@ -15,10 +16,9 @@ void parseWord(char* index){
     char* token, *english, *chinese;
     token=strtok(index," ");
     english=strdup(token);
-    token=strtok(NULL,"\n");
+    token=strtok(NULL,"\r\n");
     chinese=strdup(token);
-
-    addNode(english,chinese,POSITION_TAIL);
+    appendNode(english,chinese);
 
     free(chinese);
     free(english);

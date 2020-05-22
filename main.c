@@ -3,6 +3,7 @@
 #include "wordListOperation.h"
 #include "wordList.h"
 #include "wordFileOperation.h"
+#include "functionalOperation.h"
 
 wordList *wordlist;
 
@@ -19,10 +20,11 @@ int mainList(){
         printf("3. Modify a word\n");
         printf("4. Delete a word\n");
         printf("5. Look up a word\n");
+        printf("0. Exit\n");
         printf("Enter your choice:\n");
         scanf("%d",&choice);
         getchar(); // for eliminating "\n"
-        if (choice>5||choice<1){
+        if (choice>5||choice<0){
             printf("Illegal choice value!\n");
             continue;
         }
@@ -33,29 +35,36 @@ int mainList(){
     return choice;
 }
 
-int main() {
+void dictMain() {
+    int choice;
+    do {
+        choice = mainList();
+        switch (choice) {
+            case 1:
+                addNewWords();
+                break;
+            case 2:
+                showAllWords();
+                break;
+//            case 3:
+//                modifyWord();
+//                break;
+//            case 4:
+//                deleteWord();
+//                break;
+//            case 5:
+//                lookUpWord();
+//                break;
+            case 0:
+                printf("Exiting...\n");
+                return;
+            default:
+                printf("Illegal choice! \n");
+        }
+    }while(choice!=0);
+}
 
+int main(){
     initWordList();
-
-    int choice=mainList();
-//    switch (choice){
-//        case 1:
-//            addNewWords();
-//            break;
-//        case 2:
-//            showAllWords();
-//            break;
-//        case 3:
-//            modifyWord();
-//            break;
-//        case 4:
-//            deleteWord();
-//            break;
-//        case 5:
-//            lookUpWord();
-//            break;
-//        default:
-//            printf("Illegal choice! \n");
-//    }
-    return 0;
+    dictMain();
 }

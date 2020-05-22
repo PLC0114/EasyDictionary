@@ -3,4 +3,4 @@ project(untitled1 C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(untitled1 main.c wordListOperation.c wordListOperation.h wordList.h wordFileOperation.h wordFileOperation.c)
+add_executable(untitled1 main.c wordListOperation.c wordListOperation.h wordList.h wordFileOperation.h wordFileOperation.c functionalOperation.h functionalOperation.c)
