@@ -1,11 +1,17 @@
 #include <stdio.h>
 
-#include "wordListOperation.h"
 #include "wordList.h"
 #include "wordFileOperation.h"
 #include "functionalOperation.h"
 
 wordList *wordlist;
+int pointerAr[26];
+
+//void initPointerAr(){
+//    for (int i=0;i<26; i++){
+//        pointerAr[i]=findLast();
+//    }
+//}
 
 void initWordList(){
     wordlist=NULL;
@@ -65,6 +71,7 @@ void dictMain() {
 }
 
 int main(){
+//    initPointerAr();
     initWordList();
     dictMain();
 }

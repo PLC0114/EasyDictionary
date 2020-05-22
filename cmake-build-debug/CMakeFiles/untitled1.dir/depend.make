@@ -3,12 +3,14 @@
 
 CMakeFiles/untitled1.dir/functionalOperation.c.o: ../functionalOperation.c
 CMakeFiles/untitled1.dir/functionalOperation.c.o: ../wordList.h
+CMakeFiles/untitled1.dir/functionalOperation.c.o: ../wordListOperation.h
+
+CMakeFiles/untitled1.dir/helper.c.o: ../helper.c
 
 CMakeFiles/untitled1.dir/main.c.o: ../functionalOperation.h
 CMakeFiles/untitled1.dir/main.c.o: ../main.c
 CMakeFiles/untitled1.dir/main.c.o: ../wordFileOperation.h
 CMakeFiles/untitled1.dir/main.c.o: ../wordList.h
-CMakeFiles/untitled1.dir/main.c.o: ../wordListOperation.h
 
 CMakeFiles/untitled1.dir/wordFileOperation.c.o: ../common.h
 CMakeFiles/untitled1.dir/wordFileOperation.c.o: ../wordFileOperation.c

@@ -6,12 +6,8 @@
 
 #IncludeRegexTransform: 
 
-/cygdrive/c/Users/GODPLC/CLionProjects/EasyDictionary/EasyDictionary/common.h
-
-/cygdrive/c/Users/GODPLC/CLionProjects/EasyDictionary/EasyDictionary/wordFileOperation.c
+/cygdrive/c/Users/GODPLC/CLionProjects/EasyDictionary/EasyDictionary/functionalOperation.c
 stdio.h
--
-string.h
 -
 stdlib.h
 -
@@ -19,8 +15,6 @@ wordList.h
 /cygdrive/c/Users/GODPLC/CLionProjects/EasyDictionary/EasyDictionary/wordList.h
 wordListOperation.h
 /cygdrive/c/Users/GODPLC/CLionProjects/EasyDictionary/EasyDictionary/wordListOperation.h
-common.h
-/cygdrive/c/Users/GODPLC/CLionProjects/EasyDictionary/EasyDictionary/common.h
 
 /cygdrive/c/Users/GODPLC/CLionProjects/EasyDictionary/EasyDictionary/wordList.h
 

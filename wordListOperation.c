@@ -9,7 +9,25 @@
 
 extern wordList *wordlist;
 
-void appendNode(char* chinese, char* english){
+int checkDuplicate(char* english){
+    wordNode *curnode;
+    if (wordlist==NULL||wordlist->hd==NULL){
+        return 0;
+    }
+    else{
+        curnode=wordlist->hd;
+        while(1){
+            if (!strcmp(curnode->english,english)){
+                return 1;
+            }
+            if (curnode->nxt==NULL) break;
+            curnode=curnode->nxt;
+        }
+        return 0;
+    }
+}
+
+void appendNode(char* english, char* chinese){
 
     wordNode *curnode;
     if (wordlist==NULL){
