@@ -7,6 +7,7 @@
 
 #include "wordList.h"
 #include "wordListOperation.h"
+#include "wordFileOperation.h"
 
 extern wordList *wordlist;
 
@@ -24,12 +25,8 @@ void addNewWords(){
         printf("Input its chinese meaning:\n");
         scanf("%s",chinese);
         getchar();
-        wordNode *curnode=(wordNode*)calloc(1,sizeof(wordNode));
-        curnode->english=strdup(english);
-        curnode->chinese=strdup(chinese);
-        curnode->nxt=NULL;
-//        tbc: insertNode
-        insertNode(curnode);
+        insertNode(english,chinese);
+        saveList();
     }
 
 }
@@ -48,4 +45,25 @@ void showAllWords(){
             curnode=curnode->nxt;
         }
     }
+}
+
+void deleteWord(){
+    char* english=calloc(50,sizeof(char));
+    printf("Input an english word:\n");
+    scanf("%s",english);
+    getchar();
+
+    if (deleteNode(english)){
+        printf("Deletion succeed!\n");
+        saveList();
+    }
+    else printf("Deletion failed!\n");
+}
+
+void modifyWord(){
+    char* english=calloc(50,sizeof(char));
+    printf("Input an english word:\n");
+    scanf("%s",english);
+    getchar();
+
 }

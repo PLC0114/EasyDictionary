@@ -17,6 +17,7 @@ CMakeFiles/untitled1.dir/wordFileOperation.c.o: ../wordFileOperation.c
 CMakeFiles/untitled1.dir/wordFileOperation.c.o: ../wordList.h
 CMakeFiles/untitled1.dir/wordFileOperation.c.o: ../wordListOperation.h
 
+CMakeFiles/untitled1.dir/wordListOperation.c.o: ../wordFileOperation.h
 CMakeFiles/untitled1.dir/wordListOperation.c.o: ../wordList.h
 CMakeFiles/untitled1.dir/wordListOperation.c.o: ../wordListOperation.c
 

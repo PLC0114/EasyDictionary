@@ -40,3 +40,6 @@ void readFromFile(){
         exit(0);
     }
 }
+
+void saveList(){
+}

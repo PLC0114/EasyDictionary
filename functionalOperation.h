@@ -7,4 +7,7 @@
 
 void addNewWords();
 void showAllWords();
+void deleteWord();
+void modifyWord();
+void lookupWord();
 #endif //UNTITLED1_FUNCTIONALOPERATION_H

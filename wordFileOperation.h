@@ -6,5 +6,5 @@
 #define UNTITLED1_WORDFILEOPERATION_H
 
 void readFromFile();
-
+void saveList();
 #endif //UNTITLED1_WORDFILEOPERATION_H

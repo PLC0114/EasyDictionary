@@ -6,6 +6,7 @@
 #include <string.h>
 
 #include "wordList.h"
+#include "wordFileOperation.h"
 
 extern wordList *wordlist;
 
@@ -28,7 +29,6 @@ int checkDuplicate(char* english){
 }
 
 void appendNode(char* english, char* chinese){
-
     wordNode *curnode;
     if (wordlist==NULL){
         wordlist=(wordList*)calloc(1,sizeof(wordList));
@@ -55,5 +55,94 @@ void appendNode(char* english, char* chinese){
     curnode->chinese=strdup(chinese);
     curnode->english=strdup(english);
     curnode->nxt=NULL;
+}
 
+void insertNode(char* english, char* chinese){
+    wordNode *curnode;
+//    if nothing in the list, create one node
+    if (wordlist==NULL||wordlist->hd==NULL){
+        appendNode(english,chinese);
+    }
+    else {
+        curnode = wordlist->hd;
+//        judge whether the new word needs to be added to the head
+        if (*english < *(curnode->english)) {
+            wordlist->hd = (wordNode *) calloc(1, sizeof(wordNode));
+            wordlist->hd->english = strdup(english);
+            wordlist->hd->chinese = strdup(chinese);
+            wordlist->hd->nxt = curnode;
+        } else {
+            if (curnode->nxt == NULL) {
+                appendNode(english, chinese);
+            } else {
+                wordNode *nxtnode = curnode->nxt;
+                while (1) {
+                    if (*(curnode->english) != *(nxtnode->english)) {
+                        if (*(nxtnode->english) > *(english)) {
+                            wordNode *tempnode = (wordNode *) calloc(1, sizeof(wordNode));
+                            tempnode->chinese = strdup(chinese);
+                            tempnode->english = strdup(english);
+                            curnode->nxt = tempnode;
+                            tempnode->nxt = nxtnode;
+                            break;
+                        }
+                    }
+
+                    if (nxtnode->nxt == NULL) {
+                        appendNode(english, chinese);
+                        break;
+                    }
+                    nxtnode = nxtnode->nxt;
+                    curnode = curnode->nxt;
+                }
+            }
+        }
+    }
+}
+
+int deleteNode(char* english){
+    wordNode* node;
+    if (wordlist==NULL||wordlist->hd==NULL){
+        printf("Empty list: nothing to delete!\n");
+        return 0;
+    }
+    else{
+        node=wordlist->hd;
+        if (node->nxt==NULL){
+            if (!strcmp(node->english,english)){
+                free(node->chinese);
+                free(node->english);
+                free(node);
+                free(wordlist);
+                wordlist=NULL;
+                return 1;
+            }
+        }
+        else{
+            wordNode* nxtnode=node->nxt;
+            if (!strcmp(node->english,english)){
+                free(node->chinese);
+                free(node->english);
+                free(node);
+                wordlist->hd=nxtnode;
+                return 1;
+            }
+            else{
+                while(1){
+                    if (!strcmp(nxtnode->english,english)){
+                        node->nxt=nxtnode->nxt;
+                        free(nxtnode->chinese);
+                        free(nxtnode->english);
+                        free(nxtnode);
+                        return 1;
+                    }
+                    if (nxtnode->nxt==NULL) break;
+                    node=nxtnode;
+                    nxtnode=nxtnode->nxt;
+                }
+            }
+        }
+    }
+    printf("Noneexistent word!\n");
+    return 0;
 }
