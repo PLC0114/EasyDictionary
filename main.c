@@ -5,7 +5,6 @@
 #include "functionalOperation.h"
 
 wordList *wordlist;
-int pointerAr[26];
 
 void initWordList(){
     wordlist=NULL;
@@ -67,7 +66,6 @@ void dictMain() {
 }
 
 int main(){
-//    initPointerAr();
     initWordList();
     dictMain();
 }

@@ -8,7 +8,6 @@
 
 #include "wordList.h"
 #include "wordListOperation.h"
-#include "common.h"
 
 extern wordList *wordlist;
 
@@ -42,4 +41,16 @@ void readFromFile(){
 }
 
 void saveList(){
+    FILE *fp=fopen(".\\files\\dictionary.txt","w");
+    char line[1024];
+    if (wordlist!=NULL&&wordlist->hd!=NULL){
+        wordNode* node=wordlist->hd;
+        while(1){
+            sprintf(line,"%s %s\n",node->english,node->chinese);
+            fputs(line,fp);
+            if (node->nxt==NULL) break;
+            node=node->nxt;
+        }
+    }
+    fclose(fp);
 }

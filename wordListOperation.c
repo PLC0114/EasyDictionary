@@ -6,7 +6,6 @@
 #include <string.h>
 
 #include "wordList.h"
-#include "wordFileOperation.h"
 
 extern wordList *wordlist;
 
@@ -143,6 +142,47 @@ int deleteNode(char* english){
             }
         }
     }
+    printf("Nonexistent word!\n");
+    return 0;
+}
+
+int modifyNode(char* english, char* chinese){
+    wordNode* node;
+    if (wordlist==NULL||wordlist->hd==NULL){
+        printf("Empty list: nothing to modify!\n");
+        return 0;
+    }
+    else{
+        node=wordlist->hd;
+        while(1){
+            if (!strcmp(english, node->english)){
+                strcpy(node->chinese,chinese);
+                return 1;
+            }
+            if (node->nxt==NULL) break;
+            node=node->nxt;
+        }
+    }
+
     printf("Noneexistent word!\n");
     return 0;
+}
+
+void searchNode(char* english){
+    wordNode* node;
+    if (wordlist==NULL||wordlist->hd==NULL){
+        printf("Empty list: nothing to earch!\n");
+    }
+    else{
+        node=wordlist->hd;
+        while(1){
+            if (!strcmp(english, node->english)){
+                printf("Chinese: %s\n",node->chinese);
+                return;
+            }
+            if (node->nxt==NULL) break;
+            node=node->nxt;
+        }
+    }
+    printf("Noneexistent word!\n");
 }

@@ -62,8 +62,27 @@ void deleteWord(){
 
 void modifyWord(){
     char* english=calloc(50,sizeof(char));
+    char* chinese=calloc(50,sizeof(char));
+    printf("Input an english word:\n");
+    scanf("%s",english);
+    getchar();
+    printf("Input its new chinese meaning:\n");
+    scanf("%s",chinese);
+    getchar();
+
+    if (modifyNode(english,chinese)){
+        printf("Modification succeed!\n");
+        saveList();
+    }
+    else printf("Modification failed!\n");
+
+}
+
+void lookupWord(){
+    char* english=calloc(50,sizeof(char));
     printf("Input an english word:\n");
     scanf("%s",english);
     getchar();
 
+    searchNode(english);
 }

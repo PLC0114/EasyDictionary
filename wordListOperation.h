@@ -7,5 +7,7 @@
 void insertNode(char* english, char* chinese);
 void appendNode(char* english, char* chinese);
 int deleteNode(char* english);
+void searchNode(char* english);
+int modifyNode(char* english, char* chinese);
 int checkDuplicate(char* english);
 #endif //UNTITLED1_WORDLISTOPERATION_H
