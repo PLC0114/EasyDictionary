@@ -15,7 +15,7 @@ void parseWord(char* index){
     char* token, *english, *chinese;
     token=strtok(index," ");
     english=strdup(token);
-    token=strtok(NULL,"\r\n");
+    token=strtok(NULL,"\n");
     chinese=strdup(token);
     appendNode(english,chinese);
 
