@@ -150,33 +150,6 @@ functionalOperation.c.s:
 	$(MAKE) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/functionalOperation.c.s
 .PHONY : functionalOperation.c.s
 
-helper.o: helper.c.o
-
-.PHONY : helper.o
-
-# target to build an object file
-helper.c.o:
-	$(MAKE) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/helper.c.o
-.PHONY : helper.c.o
-
-helper.i: helper.c.i
-
-.PHONY : helper.i
-
-# target to preprocess a source file
-helper.c.i:
-	$(MAKE) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/helper.c.i
-.PHONY : helper.c.i
-
-helper.s: helper.c.s
-
-.PHONY : helper.s
-
-# target to generate assembly for a file
-helper.c.s:
-	$(MAKE) -f CMakeFiles/untitled1.dir/build.make CMakeFiles/untitled1.dir/helper.c.s
-.PHONY : helper.c.s
-
 main.o: main.c.o
 
 .PHONY : main.o
@@ -270,9 +243,6 @@ help:
 	@echo "... functionalOperation.o"
 	@echo "... functionalOperation.i"
 	@echo "... functionalOperation.s"
-	@echo "... helper.o"
-	@echo "... helper.i"
-	@echo "... helper.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

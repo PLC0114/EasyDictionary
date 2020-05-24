@@ -5,7 +5,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/cygdrive/c/Users/GODPLC/CLionProjects/EasyDictionary/EasyDictionary/functionalOperation.c" "/cygdrive/c/Users/GODPLC/CLionProjects/EasyDictionary/EasyDictionary/cmake-build-debug/CMakeFiles/untitled1.dir/functionalOperation.c.o"
-  "/cygdrive/c/Users/GODPLC/CLionProjects/EasyDictionary/EasyDictionary/helper.c" "/cygdrive/c/Users/GODPLC/CLionProjects/EasyDictionary/EasyDictionary/cmake-build-debug/CMakeFiles/untitled1.dir/helper.c.o"
   "/cygdrive/c/Users/GODPLC/CLionProjects/EasyDictionary/EasyDictionary/main.c" "/cygdrive/c/Users/GODPLC/CLionProjects/EasyDictionary/EasyDictionary/cmake-build-debug/CMakeFiles/untitled1.dir/main.c.o"
   "/cygdrive/c/Users/GODPLC/CLionProjects/EasyDictionary/EasyDictionary/wordFileOperation.c" "/cygdrive/c/Users/GODPLC/CLionProjects/EasyDictionary/EasyDictionary/cmake-build-debug/CMakeFiles/untitled1.dir/wordFileOperation.c.o"
   "/cygdrive/c/Users/GODPLC/CLionProjects/EasyDictionary/EasyDictionary/wordListOperation.c" "/cygdrive/c/Users/GODPLC/CLionProjects/EasyDictionary/EasyDictionary/cmake-build-debug/CMakeFiles/untitled1.dir/wordListOperation.c.o"

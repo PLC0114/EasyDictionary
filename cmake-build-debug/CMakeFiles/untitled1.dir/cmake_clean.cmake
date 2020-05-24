@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/untitled1.dir/functionalOperation.c.o"
-  "CMakeFiles/untitled1.dir/helper.c.o"
   "CMakeFiles/untitled1.dir/main.c.o"
   "CMakeFiles/untitled1.dir/wordFileOperation.c.o"
   "CMakeFiles/untitled1.dir/wordListOperation.c.o"
